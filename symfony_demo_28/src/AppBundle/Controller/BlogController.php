@@ -41,7 +41,7 @@ class BlogController extends Controller
     public function indexAction($page)
     {
         $posts = $this->getDoctrine()->getRepository('AppBundle:Post')->findLatest($page);
-
+        echo "This is for conflict testing";
         return $this->render('blog/index.html.twig', array('posts' => $posts));
     }
 
